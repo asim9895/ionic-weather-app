@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Settings </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loading">
+  <ion-progress-bar></ion-progress-bar>
+</ion-content>
+
+<ion-content padding *ngIf="!loading">
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <form (ngSubmit)="submitLocation()">
+            <ion-item>
+              <ion-label fixed> City </ion-label>
+              <ion-input [(ngModel)]="location" name="city" type="text">
+              </ion-input>
+              <button ion-button block type="submit">Save Location</button>
+            </ion-item>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

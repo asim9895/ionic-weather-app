@@ -24,3 +24,25 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import './src/theme/variables.scss';
+
+
+ion-toolbar {
+    text-align: center;
+    color: #fff;
+    --background: lightblue;
+    elevation: 0
+}
+
+ion-tab-bar {
+    --background: lightblue
+}
+
+ion-tab-button {
+    --color: blue;
+    --color-selected: white
+}
+
+ion-content {
+    --background: lightblue
+}
